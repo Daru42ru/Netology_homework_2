@@ -14,7 +14,7 @@ public class TestCard {
     public void  shouldSendForm() {
         $("[data-test-id=name] input").setValue("Иванов Иван");
         $("[data-test-id=phone] input").setValue("+79998887766");
-        $("[data-test-id=agreement] input").click();
+        $("[data-test-id=agreement]").click();
         $("button").click();
         $("[data-test-id=order-success]").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
@@ -22,7 +22,7 @@ public class TestCard {
     public void  shouldSendWithDashInName() {
         $("[data-test-id=name] input").setValue("Иванов Иван-Николай");
         $("[data-test-id=phone] input").setValue("+79998887766");
-        $("[data-test-id=agreement] input").click();
+        $("[data-test-id=agreement]").click();
         $("button").click();
         $("[data-test-id=order-success]").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
@@ -30,7 +30,7 @@ public class TestCard {
     public void  shouldSendWithLetterE() {
         $("[data-test-id=name] input").setValue("Иванов Пётр");
         $("[data-test-id=phone] input").setValue("+79998887766");
-        $("[data-test-id=agreement] input").click();
+        $("[data-test-id=agreement]").click();
         $("button").click();
         $("[data-test-id=order-success]").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
@@ -38,7 +38,7 @@ public class TestCard {
     public void  shouldSendWithDashAndSpaceInName() {
         $("[data-test-id=name] input").setValue("Иванов-Романов Иван Николай");
         $("[data-test-id=phone] input").setValue("+79998887766");
-        $("[data-test-id=agreement] input").click();
+        $("[data-test-id=agreement]").click();
         $("button").click();
         $("[data-test-id=order-success]").shouldHave(exactText(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
